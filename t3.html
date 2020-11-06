@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>JS ANIMATION</title>
+</head>
+<body>
+<h1>MY FIRST ANIMATION</h1>
+<p id="demo"></p>
+<script>
+var a = setInterval(inTimer, 1000);
+var size = 5;
+var ids = document.getElementById("demo");
+function inTimer() {
+ids.innerHTML = 'TEXT GROWING';
+ids.setAttribute('style', "font-size: " + size + "px; color: red");
+size += 5;
+if(size >= 50 ){
+clearInterval(a);
+var2 = setInterval(deTimer, 1000);
+}
+}
+function deTimer() {
+size -= 5;
+ids.innerHTML = 'TEXT SHRINKING';
+ids.setAttribute('style', "font-size: " + size + "px; color: blue");
+if(size == 5 ){
+clearInterval(var2);
+}
+}
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
